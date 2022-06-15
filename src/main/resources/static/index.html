@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script language="javascript">
+        function down(){
+            var date=document.getElementById("date").value;
+            var url = "http://192.168.1.248:8085/api/getAccounts?date="+date
+            window.location.replace(url);
+        }
+    </script>
+</head>
+<body>
+ <h2>请输入日期(ex:2021-05-07)，下载表格</h2>
+  <form>
+      <input type="text" name="date" id="date" />
+      <input type="button" name="button" value="下载" onclick="down()" />
+  </form>
+</body>
+</html>
